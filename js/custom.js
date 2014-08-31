@@ -35,14 +35,34 @@ function populateFromUrl(data) {
 	});
 }
 
-function paintDisplay(data)
-{
+function paintDisplay(data) {
 	$(data).find("a").each(
 			function() {
 				var filename = $(this).attr("href").replace("http:///", "");
+				if(filename.contains('.txt')){
+					return;
+				}
+				/*
+				 * $("#display").append( $("<a href='#'><img src=" + url1 +
+				 * filename + " class='col-md-3'></img></a>"));
+				 */
+				try{
+				var fileOnly = filename.substring(0,filename.lastIndexOf('.'));
+				}
+				catch(e){
+					
+				}
+				var details;
+				if(fileOnly){
+					details = getDetail(url1 + fileOnly+".txt");
+				}
 				$("#display").append(
-						$("<a href=#><img src=" + url1 + filename
-								+ " class='col-md-3'></img></a>"));
+						("<div class='col-xs-6 col-md-3'>"
+								+ "<div class='thumbnail'>"
+								+ "<img data-src='holder.js/100%x180' src='" + url1 + filename
+								+ "' alt='...'><div class='caption hide'>" + details+
+										"</div></div></div>"));
+
 			});
 }
 
@@ -58,6 +78,21 @@ function getDisplay() {
 			alert(data);
 		}
 	});
+}
+
+function getDetail(urll){
+	var retData;
+	$.ajax({
+		url : urll,
+		async:false,
+		success : function(d) {
+			retData = d;
+		},
+		error : function(d) {
+			retData = "No details available";
+		}
+	});
+	return retData;
 }
 
 /*
