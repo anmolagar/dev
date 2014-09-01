@@ -28,33 +28,49 @@
 	<script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 	<script src="js/custom.js"></script>
 
-<script>
+	<script>
+		$(document).ready(function() {
 
-$(document).ready(function(){
+		/* 	$(document).on('hover', '.hover-details', function() {
+				alert('in');
+			}, function() {
+				alert('in');
+			}); */
 
-	$(document).on('.thumbnail > img','click',function(){
-		alert('in');
-	});
-	getDisplay();
+			$(document).on('mouseenter','.hover-details img',
+					function() {
+				//alert("in");
+					$(this).siblings('div.caption').removeClass("hide");
+				}
+			);
 
-})
+			$(document).on('mouseout','.hover-details img',
+					function() {
+				//alert("in");
+					$(this).siblings('div.caption').addClass("hide");
+				}
+			);
+			
+			getDisplay();
 
-</script>
+		})
+	</script>
 
 
-	<div class="container main-container">
+	<div class="container main-container" id='main-container'>
 
 
-		<div class="border-color-green border-thick-top container main-container">
+		<div
+			class="border-color-green border-thick-top container main-container">
 			<div class="row">
 				<div class="col-md-2">
 					<img alt="logo" src="logo/logo.jpg" height="100" width="100">
 				</div>
 
-				<div class="col-md-10">
+				<div class="col-md-10 no-padding">
 					<div class="header-text">India'sGiftCollection.com</div>
 					<div>
-						<ul class="nav nav-tabs background-color-green" role="tablist">
+						<ul id="menu-item" class="nav nav-tabs background-color-green" role="tablist">
 							<li class="active"><a href="#">Home</a></li>
 							<li><a href="#">About us</a></li>
 							<li><a href="#">Products</a></li>
@@ -69,21 +85,21 @@ $(document).ready(function(){
 
 			<div class="row">
 				<div class="col-md-4 border-color-green height-150">
-					<p class="calibri">India's Gift Collection deals in fancy, traditional and
-						contemporary style and unique designs collection of items where
-
-						you can give these items as return gifts to friends, family
-						members, relatives and to your loved ones too.</p>
+					<p class="calibri">India's Gift Collection deals in fancy,
+						traditional and contemporary style and unique designs collection
+						of items where you can give these items as return gifts to
+						friends, family members, relatives and to your loved ones too.</p>
 				</div>
 
-				<div class="col-md-8 border-color-green height-150">Live slides</div>
+				<div class="col-md-8 border-color-green height-150">
+				<div class='margin-top'>Live slides</div></div>
 			</div>
 		</div>
-		<div class="border-color-green border-thick-top container main-container" id="display"></div>
+		<div
+			class="well well-lg border-color-green border-thick-top container main-container"
+			id="display"></div>
 
-	<div id="rssFeeds">
-	
-	</div>
+		<div id="rssFeeds"></div>
 
 	</div>
 </body>

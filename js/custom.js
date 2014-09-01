@@ -37,7 +37,9 @@ function populateFromUrl(data) {
 
 function paintDisplay(data) {
 	$(data).find("a").each(
-			function() {
+			function(a,b) {
+				console.log("a :"+a);
+				console.log("b :"+b);
 				var filename = $(this).attr("href").replace("http:///", "");
 				if(filename.contains('.txt')){
 					return;
@@ -58,7 +60,7 @@ function paintDisplay(data) {
 				}
 				$("#display").append(
 						("<div class='col-xs-6 col-md-3'>"
-								+ "<div class='thumbnail'>"
+								+ "<div class='thumbnail hover-details'>"
 								+ "<img data-src='holder.js/100%x180' src='" + url1 + filename
 								+ "' alt='...'><div class='caption hide'>" + details+
 										"</div></div></div>"));
