@@ -30,17 +30,11 @@
 
 	<script>
 		$(document).ready(function() {
-
-		/* 	$(document).on('hover', '.hover-details', function() {
-				alert('in');
-			}, function() {
-				alert('in');
-			}); */
-
 			$(document).on('mouseenter','.hover-details img',
 					function() {
 				//alert("in");
 					$(this).siblings('div.caption').removeClass("hide");
+					$(this).parent().addClass('absolute-pop').addClass('col-md-12');
 				}
 			);
 
@@ -48,6 +42,7 @@
 					function() {
 				//alert("in");
 					$(this).siblings('div.caption').addClass("hide");
+					$(this).parent().removeClass('absolute-pop').removeClass('col-md-12');
 				}
 			);
 			
@@ -62,7 +57,7 @@
 
 		<div
 			class="border-color-green border-thick-top container main-container">
-			<div class="row">
+			<div class="row margin-top30">
 				<div class="col-md-2">
 					<img alt="logo" src="logo/logo.jpg" height="100" width="100">
 				</div>
@@ -92,7 +87,7 @@
 				</div>
 
 				<div class="col-md-8 border-color-green height-150">
-				<div class='margin-top'>Live slides</div></div>
+				<div class='livefeed-center'>Live slides</div></div>
 			</div>
 		</div>
 		<div

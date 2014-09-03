@@ -1,6 +1,5 @@
 @CHARSET "UTF-8";
 .header-text {
-	color: #800080;
 	font-family: arial;
 	font-weight: bold;
 	font-size: 40px;
@@ -29,8 +28,13 @@
 	border-width: 1px;
 }
 
+.absolute-pop{
+z-index: 1;
+position: absolute;
+}
+
 .border-thick-top{
-border-top-width: 3px;
+border-top-width: 7px;
 }
 
 .calibri{
@@ -51,10 +55,14 @@ img.col-md-3 {
     border-radius: inherit;
 }
 
-.margin-top {
+.livefeed-center {
     font-size: xx-large;
     margin-left: 202px;
     margin-top: 46px;
+}
+
+.margin-top30{
+	margin-top: 30px;
 }
 
 #menu-item.nav > li > a:hover, #menu-item.nav > li > a:focus {

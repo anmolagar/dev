@@ -21,7 +21,8 @@ var products = "products";
 var debug;
 var new_data;
 var fileextension = ".JPG";
-
+var displayItemCnt = 0;
+var DisplayItemrowCnt = 0;
 function populateFromUrl(data) {
 
 	return $(data).map(function(a, d) {
@@ -38,32 +39,40 @@ function populateFromUrl(data) {
 function paintDisplay(data) {
 	$(data).find("a").each(
 			function(a,b) {
-				console.log("a :"+a);
-				console.log("b :"+b);
 				var filename = $(this).attr("href").replace("http:///", "");
-				if(filename.contains('.txt')){
+				if(filename.indexOf('.jpg')==-1 && filename.indexOf('.png')==-1){
 					return;
+				}
+				displayItemCnt = displayItemCnt+1;
+				if(displayItemCnt%4==1){
+					DisplayItemrowCnt = DisplayItemrowCnt+1;
+					$("#display").append("<div id='row"+DisplayItemrowCnt+"' class='row'/>");
 				}
 				/*
 				 * $("#display").append( $("<a href='#'><img src=" + url1 +
 				 * filename + " class='col-md-3'></img></a>"));
 				 */
+				
 				try{
 				var fileOnly = filename.substring(0,filename.lastIndexOf('.'));
 				}
 				catch(e){
 					
 				}
-				var details;
+				/*var details;
 				if(fileOnly){
 					details = getDetail(url1 + fileOnly+".txt");
-				}
-				$("#display").append(
-						("<div class='col-xs-6 col-md-3'>"
-								+ "<div class='thumbnail hover-details'>"
+				}*/
+				$("#display #row"+DisplayItemrowCnt).append("<div class='col-xs-6 col-md-3'>"
+								+ "<div class='thumbnail hover-details' id='thumb"+displayItemCnt+"'>"
 								+ "<img data-src='holder.js/100%x180' src='" + url1 + filename
-								+ "' alt='...'><div class='caption hide'>" + details+
-										"</div></div></div>"));
+								+ "' alt='...'><div class='caption hide' id='details"+displayItemCnt+"'>"+
+										"</div></div></div>");
+				
+				//getDetail(url1 + fileOnly+".txt",DisplayItemrowCnt);
+				$("#details"+displayItemCnt).load(url1 + fileOnly+".txt");
+				
+				
 
 			});
 }
@@ -82,8 +91,10 @@ function getDisplay() {
 	});
 }
 
-function getDetail(urll){
-	var retData;
+function getDetail(urll,Dcnt){
+	
+	$("#details"+Dcnt).load(urll);
+	/*var retData;
 	$.ajax({
 		url : urll,
 		async:false,
@@ -94,7 +105,7 @@ function getDetail(urll){
 			retData = "No details available";
 		}
 	});
-	return retData;
+	return retData;*/
 }
 
 /*
