@@ -29,26 +29,33 @@
 	<script src="js/custom.js"></script>
 
 	<script>
-		$(document).ready(function() {
-			$(document).on('mouseenter','.hover-details img',
-					function() {
-				//alert("in");
-					$(this).siblings('div.caption').removeClass("hide");
-					$(this).parent().addClass('absolute-pop').addClass('col-md-12');
-				}
-			);
+		$(document).ready(
+				function() {
+					$(document).on(
+							'mouseenter',
+							'.hover-details img',
+							function() {
+								//alert("in");
+								$(this).siblings('div.caption').removeClass(
+										"hide");
+								$(this).parent().addClass('absolute-pop')
+										.addClass('col-md-12');
+							});
 
-			$(document).on('mouseout','.hover-details img',
-					function() {
-				//alert("in");
-					$(this).siblings('div.caption').addClass("hide");
-					$(this).parent().removeClass('absolute-pop').removeClass('col-md-12');
-				}
-			);
-			
-			getDisplay();
+					$(document).on(
+							'mouseout',
+							'.hover-details img',
+							function() {
+								//alert("in");
+								$(this).siblings('div.caption')
+										.addClass("hide");
+								$(this).parent().removeClass('absolute-pop')
+										.removeClass('col-md-12');
+							});
 
-		})
+					getDisplay();
+
+				})
 	</script>
 
 
@@ -65,7 +72,8 @@
 				<div class="col-md-10 no-padding">
 					<div class="header-text">India'sGiftCollection.com</div>
 					<div>
-						<ul id="menu-item" class="nav nav-tabs background-color-green" role="tablist">
+						<ul id="menu-item" class="nav nav-tabs background-color-green"
+							role="tablist">
 							<li class="active"><a href="#">Home</a></li>
 							<li><a href="#">About us</a></li>
 							<li><a href="#">Products</a></li>
@@ -87,15 +95,20 @@
 				</div>
 
 				<div class="col-md-8 border-color-green height-150">
-				<div class='livefeed-center'>Live slides</div></div>
+					<div class='livefeed-center'>Live slides</div>
+				</div>
 			</div>
 		</div>
 		<div
-			class="well well-lg border-color-green border-thick-top container main-container"
+			class="well-lg border-color-green border-thick-top container main-container no-radius"
 			id="display"></div>
-
-		<div id="rssFeeds"></div>
-
+		<div class="well well-lg border-color-green border-thick-bottom container main-container no-radius">
+			<iframe
+				src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FIndias-Gift-Collections%2F278681232313422&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35"
+				scrolling="no" frameborder="0"
+				style="border: none; overflow: hidden; height: 35px;"
+				allowTransparency="true"></iframe>
+		</div>
 	</div>
 </body>
 </html>
