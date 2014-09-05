@@ -72,7 +72,9 @@ img.col-md-3 {
 .margin-top30{
 	margin-top: 30px;
 }
-
+.margin-top15{
+	margin-top: 15px;
+}
 #menu-item.nav > li > a:hover, #menu-item.nav > li > a:focus {
     background-color: #B9F68D;
 }
@@ -84,6 +86,12 @@ img.col-md-3 {
 #menu-item.nav-tabs > li{
 	border-bottom: 0px;
 }
+
+#menu-item.nav-tabs a{
+	padding-left:  25px;
+	padding-right: 25px;
+}
+
 
 #menu-item.nav-tabs{
 	border-bottom: 1px solid green;
