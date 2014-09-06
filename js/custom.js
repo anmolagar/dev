@@ -22,6 +22,7 @@ var debug;
 var new_data;
 var fileextension = ".JPG";
 var displayItemCnt = 0;
+var liveItemCnt = 0;
 var DisplayItemrowCnt = 0;
 function populateFromUrl(data) {
 
@@ -33,6 +34,45 @@ function populateFromUrl(data) {
 	})[0].children().map(function(i, d) {
 		if (i > 2)
 			return d;
+	});
+}
+
+function paintLiveFeeds(data) {
+	$(data).find("a").each(
+			function(a,b) {
+				var filename = $(this).attr("href").replace("http:///", "");
+				if(filename.indexOf('.jpg')==-1 && filename.indexOf('.png')==-1){
+					return;
+				}
+				
+				$('#carousel-indicators').append("<li data-target='#carousel-example-generic' data-slide-to='"+liveItemCnt+"' class='active'/>");
+				liveItemCnt = liveItemCnt+1;
+				
+				/*
+				 * $("#display").append( $("<a href='#'><img src=" + url1 +
+				 * filename + " class='col-md-3'></img></a>"));
+				 */
+				
+				try{
+				var fileOnly = filename.substring(0,filename.lastIndexOf('.'));
+				}
+				catch(e){
+					
+				}
+				/*var details;
+				if(fileOnly){
+					details = getDetail(url1 + fileOnly+".txt");
+				}*/
+				$("#carousel-innerDiv").append("<div class='item hight-inherit"+(liveItemCnt==1?' active':'')+"'>" +
+						"							<div class='hight-inherit' id='coarousel-image"+liveItemCnt+"'>" +
+						"								<img src='"+url1+filename+"' alt='pic"+liveItemCnt+"'" +
+						"									class='hight-inherit'></div>" +
+						"							<div class='carousel-caption' id='coarousel-cation"+liveItemCnt+"'></div>" +
+						"						</div>");
+				
+				//getDetail(url1 + fileOnly+".txt",DisplayItemrowCnt);
+				$("#coarousel-cation"+liveItemCnt).load(url1 + fileOnly+".txt");
+				
 	});
 }
 
@@ -75,6 +115,20 @@ function paintDisplay(data) {
 				
 
 			});
+}
+
+function getLiveFeed() {
+
+	var urll = url1 + url2 + live_feeds;
+	$.ajax({
+		url : urll,
+		success : function(data) {
+			paintLiveFeeds(populateFromUrl(data));
+		},
+		error : function(data) {
+			alert(data);
+		}
+	});
 }
 
 function getDisplay() {

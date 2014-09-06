@@ -52,63 +52,89 @@
 								$(this).parent().removeClass('absolute-pop')
 										.removeClass('col-md-12');
 							});
-
+					
+					getLiveFeed();
 					getDisplay();
 
 				})
 	</script>
 
 
-	<div class="container main-container" id='main-container'>
+	<!-- <div class="container main-container" id='main-container'> -->
 
 
-		<div
-			class="border-color-green border-thick-top container main-container">
-			<div class="row">
-				<div class="col-md-1 no-padding margin-top15">
-					<img alt="logo" align="bottom" src="logo/logo.png" height="114" width="100">
-				</div>
-
-				<div class="col-md-11 no-padding margin-top30">
-					<div class="header-text">India'sGiftCollection.com</div>
-					<div>
-						<ul id="menu-item" class="nav nav-tabs background-color-green"
-							role="tablist">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Products</a></li>
-							<li><a href="#">Gift ideas</a></li>
-							<li><a href="#">Special occasions</a></li>
-							<li><a href="#">Customer care</a></li>
-							<li><a href="#">Contact us</a></li>
-						</ul>
-					</div>
-				</div>
+	<div
+		class="border-color-green border-thick-top container main-container">
+		<div class="row">
+			<div class="col-md-1 no-padding margin-top15">
+				<img alt="logo" align="bottom" src="logo/logo.png" height="114"
+					width="100">
 			</div>
 
-			<div class="row">
-				<div class="col-md-4 border-color-green height-150">
-					<p class="calibri">India's Gift Collection deals in fancy,
-						traditional and contemporary style and unique designs collection
-						of items where you can give these items as return gifts to
-						friends, family members, relatives and to your loved ones too.</p>
-				</div>
-
-				<div class="col-md-8 border-color-green height-150">
-					<div class='livefeed-center'>Live slides</div>
+			<div class="col-md-11 no-padding margin-top30">
+				<div class="header-text">India'sGiftCollection.com</div>
+				<div>
+					<ul id="menu-item" class="nav nav-tabs background-color-green"
+						role="tablist">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Gift ideas</a></li>
+						<li><a href="#">Special occasions</a></li>
+						<li><a href="#">Customer care</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
-		<div
-			class="well-lg border-color-green border-thick-top container main-container no-radius"
-			id="display"></div>
-		<div class="well well-lg border-color-green border-thick-bottom container main-container no-radius">
-			<iframe
-				src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FIndias-Gift-Collections%2F278681232313422&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35"
-				scrolling="no" frameborder="0"
-				style="border: none; overflow: hidden; height: 35px;"
-				allowTransparency="true"></iframe>
+
+		<div class="row">
+			<div class="col-md-4 border-color-green height-150">
+				<p class="calibri">India's Gift Collection deals in fancy,
+					traditional and contemporary style and unique designs collection of
+					items where you can give these items as return gifts to friends,
+					family members, relatives and to your loved ones too.</p>
+			</div>
+
+			<div class="col-md-8 border-color-green height-150 live-slide">
+
+
+				<div id="carousel-example-generic"
+					class="carousel slide hight-inherit" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators" id="carousel-indicators">
+						
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner hight-inherit" id="carousel-innerDiv">
+					</div>
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic"
+						role="button" data-slide="prev"> <span
+						class="glyphicon glyphicon-chevron-left"></span>
+					</a> <a class="right carousel-control" href="#carousel-example-generic"
+						role="button" data-slide="next"> <span
+						class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
+
+
+
+
+			</div>
 		</div>
 	</div>
+	<div
+		class="well-lg border-color-green border-thick-top container main-container no-radius"
+		id="display"></div>
+	<div
+		class="well well-lg border-color-green border-thick-bottom container main-container no-radius">
+		<iframe
+			src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FIndias-Gift-Collections%2F278681232313422&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35"
+			scrolling="no" frameborder="0"
+			style="border: none; overflow: hidden; height: 35px;"
+			allowTransparency="true"></iframe>
+	</div>
+	<!-- </div> -->
 </body>
 </html>
