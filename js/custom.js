@@ -13,14 +13,15 @@
  }
  });*/
 
-var url1 = "https://www.googledrive.com";
-var url2 = "/host/0B37v0cgU8tVPTGhWaEVpU1FnejQ/";
-var display = "display";
-var live_feeds = "live feeds";
-var products = "products";
+var url1 = "https://b8e9fc0e52c8a2a0b494b9316454aefe8f3a262b-www.googledrive.com";
+//var url2_anmol = "/host/0B37v0cgU8tVPTGhWaEVpU1FnejQ/";
+var url2 = "/host/0Bx5cpAhwRTVEUjQxclg3T3dvZ0E/";
+var display = "Display";
+var live_feeds = "livefeeds";
+var products = "Products";
 var debug;
 var new_data;
-var fileextension = ".JPG";
+var fileextension = ".jpg";
 var displayItemCnt = 0;
 var liveItemCnt = 0;
 var DisplayItemrowCnt = 0;
