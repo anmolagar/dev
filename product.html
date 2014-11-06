@@ -16,10 +16,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<link href="css/NewFile.css" rel="stylesheet">
 <link href="css/custom.css" rel="stylesheet">
 
 </head>
 <body>
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -28,40 +30,16 @@
 	<script src="js/custom.js"></script>
 
 	<script>
-		$(document).ready(
-				function() {
-					$(document).on(
-							'mouseenter',
-							'.hover-details img',
-							function() {
-								//alert("in");
-								$(this).siblings('div.caption').removeClass(
-										"hide");
-								$(this).parent().addClass('absolute-pop')
-										.addClass('col-md-12');
-							});
-
-					$(document).on(
-							'mouseout',
-							'.hover-details img',
-							function() {
-								//alert("in");
-								$(this).siblings('div.caption')
-										.addClass("hide");
-								$(this).parent().removeClass('absolute-pop')
-										.removeClass('col-md-12');
-							});
-					
-					getLiveFeed();
-					getDisplay();
-
-				})
+		$(document).ready(function() {
+			getProduct();
+			$('.tree li').hide();
+			$('.tree>ul>li').show();
+		});
 	</script>
-
 
 	<!-- <div class="container main-container" id='main-container'> -->
 
- 
+
 	<div
 		class="border-color-green border-thick-top container main-container">
 		<div class="row">
@@ -75,9 +53,9 @@
 				<div>
 					<ul id="menu-item" class="nav nav-tabs background-color-green"
 						role="tablist">
-						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="about_us.html">About us</a></li>
-						<li><a href="product.html">Products</a></li>
+						<li class="active"><a href="#">Products</a></li>
 						<li><a href="#">Gift ideas</a></li>
 						<li><a href="#">Special occasions</a></li>
 						<li><a href="#">Customer care</a></li>
@@ -88,44 +66,24 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-4 border-color-green height-150">
-				<p class="calibri">India's Gift Collection deals in fancy,
-					traditional and contemporary style and unique designs collection of
-					items where you can give these items as return gifts to friends,
-					family members, relatives and to your loved ones too.</p>
-			</div>
 
-			<div class="col-md-8 border-color-green height-150 live-slide">
-
-
-				<div id="carousel-example-generic"
-					class="carousel slide hight-inherit" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators" id="carousel-indicators">
-						
-					</ol>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner hight-inherit" id="carousel-innerDiv">
-					</div>
-					<!-- Controls -->
-					<a class="left carousel-control" href="#carousel-example-generic"
-						role="button" data-slide="prev"> <span
-						class="glyphicon glyphicon-chevron-left"></span>
-					</a> <a class="right carousel-control" href="#carousel-example-generic"
-						role="button" data-slide="next"> <span
-						class="glyphicon glyphicon-chevron-right"></span>
-					</a>
+			<div id="product_list"
+				class="col-md-4 border-color-green height-200 overflow-auto">
+				<div class='tree'>
+					<ul>
+						<li><a href='#' onclick="treeAnimate($(this).parent('li'))">Products
+								List</a></li>
+					</ul>
 				</div>
-
-
-
-
+			</div>
+			<div class="col-md-8">
+				<div id="product_detail"
+					class="height-150 live-slide"></div>
+					<div id="product_desc"></div>
 			</div>
 		</div>
+
 	</div>
-	<div
-		class="well-lg border-color-green border-thick-top container main-container no-radius"
-		id="display"></div>
 	<div
 		class="well well-lg border-color-green border-thick-bottom container main-container no-radius">
 		<iframe
@@ -134,6 +92,5 @@
 			style="border: none; overflow: hidden; height: 35px;"
 			allowTransparency="true"></iframe>
 	</div>
-	<!-- </div> -->
 </body>
 </html>
