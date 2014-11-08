@@ -1,11 +1,16 @@
 @CHARSET "UTF-8";
 
+@IMPORT url("http://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico|Dancing+Script|Pinyon+Script");
 .header-text {
-	font-family: arial;
-	font-weight: bold;
-	font-size: 30px;
+	font-family: "Pacifico",cursive,arial;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
-
+.menu-style{
+	margin-top:10px;
+}
 .background-color-green {
 	background-color: green;
 }
@@ -93,11 +98,11 @@ img.col-md-3 {
 
 
 .margin-top30 {
-	margin-top: 50px;
+	margin-top: 29px;
 }
 
 .margin-top15 {
-	margin-top: 15px;
+	margin-top: 0px;
 }
 
 #menu-item.nav>li>a:hover,#menu-item.nav>li>a:focus {
