@@ -311,7 +311,7 @@ function initialise(){
 		$(document.body).css('padding-top','163px');
 	}*/
 	
-		$(document.body).css('padding-top',80+Number.toInteger($('#menu-list').css('height').replace('px',''))+'px');
+		$(document.body).css('padding-top',80+Number.parseInt($('#menu-list').css('height').replace('px',''))+'px');
 	
 	
 }
