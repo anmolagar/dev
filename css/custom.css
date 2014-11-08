@@ -1,16 +1,21 @@
 @CHARSET "UTF-8";
 
-@IMPORT url("http://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico|Dancing+Script|Pinyon+Script");
+@IMPORT
+	url("http://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico|Dancing+Script|Pinyon+Script")
+	;
+
 .header-text {
-	font-family: "Pacifico",cursive,arial;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 10px;
+	font-family: "Pacifico", cursive, arial;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-left: 10px;
 }
-.menu-style{
-	margin-top:10px;
+
+.menu-style {
+	margin-top: 10px;
 }
+
 .background-color-green {
 	background-color: green;
 }
@@ -55,23 +60,22 @@
 }
 
 .carousel-caption {
-    color: green;
-    left: 54%;
-    right: 10%;
-    top: 0;
+	color: green;
+	left: 54%;
+	right: 10%;
+	top: 0;
 }
 
-
-.carousel-indicators li{
+.carousel-indicators li {
 	border-color: green;
 }
 
-.carousel-indicators .active{
+.carousel-indicators .active {
 	background-color: green;
 }
 
-.overflow-auto{
-	overflow:auto;
+.overflow-auto {
+	overflow: auto;
 }
 
 .hight-inherit {
@@ -96,7 +100,6 @@ img.col-md-3 {
 	border-radius: inherit;
 }
 
-
 .margin-top30 {
 	margin-top: 29px;
 }
@@ -109,8 +112,8 @@ img.col-md-3 {
 	background-color: #B9F68D;
 }
 
-.live-slide{
-	padding:15px;
+.live-slide {
+	padding: 15px;
 }
 
 #main-container {
@@ -142,6 +145,16 @@ img.col-md-3 {
 	background-color: #ffffff;
 }
 
-.padding{
-	padding:10px;
+.padding {
+	padding: 10px;
+}
+
+body {
+	padding-top: 122px;
+}
+
+.bg-white {
+	background-color: white;
+	 margin-left: auto;
+    margin-right: auto;
 }

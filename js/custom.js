@@ -79,7 +79,7 @@ function paintLiveFeeds(data, caption) {
 												+ (liveItemCnt == 1 ? ' active'
 														: '')
 												+ "'>"
-												+ "							<div class='hight-inherit' id='coarousel-image"
+												+ "							<div align='center' class='hight-inherit' id='coarousel-image"
 												+ liveItemCnt
 												+ "'>"
 												+ "								<img src='"
@@ -284,10 +284,35 @@ function getDetail(urll, Dcnt) {
 	 */
 }
 
-/*
- * $("#rssFeeds").load(dir, function(data){ $(data).find("a:contains(" +
- * fileextension + ")").each(function () { var filename =
- * this.href.replace(window.location.host, "").replace("http:///", "");
- * $("#rssFeeds").append($("<img src=" + dir + filename + "></img>")); }); });
- */
+function findBootstrapDeviceSize() {
+	  var dsize = ['lg', 'md', 'sm', 'xs'];
+	  for (var i = dsize.length - 1; i >= 0; i--) {
+
+	    // Need to add &nbsp; for Chrome. Works fine in Firefox/Safari/Opera without it.
+	    // Chrome seem to have an issue with empty div's
+	    $el = $('<div id="sizeTest" class="hidden-'+dsize[i]+'">&nbsp;</div>');
+	    $el.appendTo($('body'));
+
+	    if ($el.is(':hidden')) {
+	      $el.remove();
+	      return dsize[i];
+	    }
+	  }
+
+	  return 'unknown';
+	}
+
+function initialise(){
+	/*var dev = findBootstrapDeviceSize();
+	if(dev=='lg'){
+		$(document.body).css('padding-top','122px');
+	}
+	else if(dev=='md'){
+		$(document.body).css('padding-top','163px');
+	}*/
+	
+		$(document.body).css('padding-top',80+Number.toInteger($('#menu-list').css('height').replace('px',''))+'px');
+	
+	
+}
 

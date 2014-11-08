@@ -30,7 +30,12 @@
 	<script src="js/custom.js"></script>
 
 	<script>
+		$(window).resize(function() {
+			initialise();
+		});
+
 		$(document).ready(function() {
+			initialise();
 			getProduct();
 			$('.tree li').hide();
 			$('.tree>ul>li').show();
@@ -40,17 +45,17 @@
 	<!-- <div class="container main-container" id='main-container'> -->
 
 
-	<div
-		class="border-color-green border-thick-top container main-container">
-		<div class="row">
-			<div class="col-md-1 no-padding margin-top15">
+	<div class="container main-container">
+		<div
+			class="row navbar-fixed-top bg-white border-color-green border-thick-top container main-container">
+			<div class="col-lg-1 col-xs-2 no-padding margin-top15" align="right">
 				<img alt="logo" align="bottom" src="logo/logo.png" height="114"
 					width="100">
 			</div>
 
-			<div class="col-md-11 no-padding margin-top30">
+			<div class="col-lg-11 col-xs-10 no-padding margin-top30">
 				<div class="header-text">India'sGiftCollection.com</div>
-				<div>
+				<div id='menu-list'>
 					<ul id="menu-item" class="nav nav-tabs background-color-green"
 						role="tablist">
 						<li><a href="index.html">Home</a></li>
@@ -77,9 +82,8 @@
 				</div>
 			</div>
 			<div class="col-md-8">
-				<div id="product_detail"
-					class="height-150 live-slide"></div>
-					<div id="product_desc"></div>
+				<div id="product_detail" class="height-150 live-slide"></div>
+				<div id="product_desc"></div>
 			</div>
 		</div>
 
