@@ -6,10 +6,8 @@
 
 .header-text {
 	font-family: "Pacifico", cursive, arial;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
-	margin-bottom: 10px;
-	margin-left: 10px;
 }
 
 .menu-style {
@@ -20,6 +18,10 @@
 	background-color: green;
 }
 
+.no-margin-bottom{
+	margin-bottom: 0px; 
+
+	}
 .glyphicon,.background-color-green li.active a:focus,.background-color-green a:hover
 	{
 	color: green;
@@ -38,6 +40,9 @@
 	border-width: 1px;
 }
 
+.no-border{
+	border-width: 0px;
+}
 .absolute-pop {
 	z-index: 1;
 	position: absolute;
@@ -86,6 +91,10 @@
 	height: 300px;
 }
 
+.height-50 {
+	height: 101px;
+}
+
 .height-200 {
 	height: 400px;
 }
@@ -108,8 +117,12 @@ img.col-md-3 {
 	margin-top: 0px;
 }
 
-#menu-item.nav>li>a:hover,#menu-item.nav>li>a:focus {
+#menu-item.nav>li>a:hover,#menu-item.nav>li>a:focus,#menu-item.nav li.active a{
 	background-color: #B9F68D;
+	color:green;
+}
+#menu-item.nav>li a{
+	color:#B9F68D;
 }
 
 .live-slide {
@@ -120,16 +133,16 @@ img.col-md-3 {
 	margin-top: 20px;
 }
 
-#menu-item.nav-tabs>li {
+#menu-item.nav>li {
 	border-bottom: 0px;
 }
 
-#menu-item.nav-tabs a {
+#menu-item.nav a {
 	padding-left: 25px;
 	padding-right: 25px;
 }
 
-#menu-item.nav-tabs {
+#menu-item.nav {
 	border-bottom: 1px solid green;
 }
 
@@ -149,12 +162,6 @@ img.col-md-3 {
 	padding: 10px;
 }
 
-body {
-	padding-top: 122px;
-}
-
-.bg-white {
+.bgcolor-white{
 	background-color: white;
-	 margin-left: auto;
-    margin-right: auto;
 }
